@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+ .list-articles {
+  margin-left: 150px;
+ }
+
+ a {
+  text-decoration: none;
+ }
+
+ p {
+  font-size: 20px;
+  font-weight: lighter;
+ }
+
+ .add-article {
+  margin-left: 150px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+ }
+
+ .new-article {
+  margin-right: 250px;
+  margin-left: 50px;
+ }
+
+ .show {
+  margin-left: 150px;
+ }

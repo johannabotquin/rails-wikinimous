@@ -1,9 +1,15 @@
 <div class="container">
-
-  <% @articles.each do |article| %>
-    <h2><%= link_to article.title,  article_path(article) %></h2>
-    <h4><%= link_to "Delete", article_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></h4>
-  <% end %>
-
-  <%= link_to "Add a new article", new_article_path %>
+  <div class="list-articles">
+    <% @articles.each do |article| %>
+      <p>
+        <h3><%= link_to article.title,  article_path(article) %>
+        <%= link_to article_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do%>
+          <i class="fa-solid fa-trash ms-4" style="color: #adbef0;"></i>
+        <% end %></h3>
+      </p>
+      <p>
+        <%= article.content.truncate(35) %>
+      </p>
+    <% end %>
+  </div>
 </div>
